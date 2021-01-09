@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Registration form</title>
+    <script src = "./RegistrationJs.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./Registration.css" type="text/css">
+</head>
+
+<body onload="display()">
+    <div class="container" style="margin-top: 100px ;">
+           
+            <h2 class="h2" style="text-align: center; padding-top: 35px; padding-bottom: 30px; color: white;">Enter your registration details</h2>
+            <form class="form-group" method="GET" action="" onsubmit="return validateData()">
+                <div class="row jumbotron">
+                    <div class="col-md-6">
+                        <div class="p-2">
+                            <input type="text" class="form-control" placeholder="First name" name="txtFirstname" id="txtFirstnameId" value="" pattern="[A-Z][a-z]+" title="First name should start with Capital letter">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-2">
+                            <input type="text" class="form-control" placeholder="Username" name="txtUsername" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-2">
+                            <input type="password" class="form-control" placeholder="Password" name="txtPassword" id="txtPassword" required>
+                            </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-2">
+                        <input type="password" class="form-control" placeholder="Confirm Password" name="txtCPassword" id ="txtCPassword">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-2">
+                            <select class="form-control" name="txtstate">
+                            <option disabled selected>Select State</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="PN">Pune</option>
+                            <option value="CH">Chennai</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-2">
+                        <input class="form-control" type="text" name="txtDob" placeholder="Date of Birth" onfocus="(this.type ='date')">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="p-2">
+                        <input class="form-control" type="number" placeholder="Age" name="txtAge" min="18" max="60">
+                        </div>
+                    </div>
+                    
+                <div class="col-md-12" style="text-align: center; padding-top: 30px;">
+                  
+                        <input type="submit" class="btn btn-primary" value="REGISTER" name="btnRegister">
+                    
+                        <input type="reset" class="btn btn-primary" value="RESET" name="btnReset">
+                  
+                </div>
+                </div>
+            
+            </form>
+            
+        </div>
+        
+
+
+
+<!--
+<form class="form-horizontal hr" action="" name="registrationForm" method="GET" onsubmit="return validateData()">
+    <div class="mb-2">
+        <input class="" type="text" name="txtFirstname" id="txtFirstnameId" value="" pattern="[A-Z][a-z]+" title="First name should start with Capital letter" placeholder="First name" size="30"><br>
+    </div>
+    <div class="mb-2">
+        <input type="text" name="txtUsername" value="" size="30" required ><br/>
+        </div>
+        <div class="mb-2">
+   <input type="password" name="txtPassword" value="" size="30" required><br/>
+    </div>
+    <div class="mb-2">
+    <input type="password" name="txtCPassword" value="" size="30"><br/>
+    </div>
+    <div class="mb-2">
+    State : <select name="txtstate">
+        <option>Select State</option>
+        <option value="MH">Maharashtra</option>
+        <option value="PN">Pune</option>
+        <option value="CH">Chennai</option>
+    </select><br>
+    </div>
+    <div class="mb-2">
+    DOB : <input type="date" name="txtDob"><br/>
+    </div>
+    <div class="mb-2">
+    Age : <input type="number" name= "txtAge" min="18" max="60"><br/>
+    </div>
+    <div class="mb-2">
+    <input type="submit" name="btnRegister" value="REGISTER">
+    <input type="button" name="btnNext" value="NEXT">
+    <input type="reset" name="btnReset" value="RESET">
+    </div>
+
+
+</form>-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+</body>
+</html>
